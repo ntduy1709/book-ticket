@@ -11,8 +11,8 @@ public class UserDTO {
     private int id;
     private String name;
     private String address;
-    private int idCard;
-    private Date doB;
-    private EnumTicket typeOfClass;
+    private String idCard;
+    private String doB;
+    private String typeOfClass;
     private int payment;
 }

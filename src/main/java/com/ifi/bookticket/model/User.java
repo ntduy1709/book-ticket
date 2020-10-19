@@ -21,7 +21,7 @@ public class User {
     private String address;
 
     @Column(name = "IDcard")
-    private int idCard;
+    private String idCard;
 
     @Column(name = "DoB")
     private Date doB;

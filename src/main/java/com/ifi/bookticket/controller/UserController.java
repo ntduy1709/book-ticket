@@ -10,19 +10,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping()
     public List<UserDTO> getUsers() {
         return userService.getUsers();
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public UserDTO postUser(@RequestBody UserDTO userDTO) {
+
         return userService.postUser(userDTO);
     }
 }
